@@ -1,0 +1,11 @@
+{
+	"ELECTRONICAL_MEDICAL_REPORTS": "Historia Clínica Electrónica",
+	"SPANISH": "Español",
+	"ENGLISH": "Inglés",
+	"DOCTOR_IMAGE": "Imagen del doctor",
+	"LOG_IN_TITTLE": "Ingresa a tu cuenta",
+	"EMAIL_ADDRESS": "Correo electrónico",
+	"PASSWORD": "Contraseña",
+	"SIGN_IN": "Iniciar sesión",
+	"INVALID_CREDENTIALS": "Correo electrónico o contraseña incorrecta"
+}

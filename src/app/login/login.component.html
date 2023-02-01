@@ -1,0 +1,20 @@
+<main class="text-center form-signin w-100 m-auto" >
+    <form [formGroup]="form" #f="ngForm" class="pt-3 m-3" (ngSubmit)="login()">
+        <img class="mb-4 rounded-circle" src="/assets/doctor.jpg" alt="{{'DOCTOR_IMAGE'|translate}}" width="50%">
+        <h1 class="h3 mb-3 fw-normal" translate>LOG_IN_TITTLE</h1>
+
+        <div *ngIf="form.get('email') as email" class="form-floating">
+            <input type="email" class="form-control" [class.is-invalid]="email.invalid && (email.dirty || f.submitted)" id="email" placeholder="name@example.com" formControlName="email">
+            <label for="email" translate>EMAIL_ADDRESS</label>
+        </div>
+        <div *ngIf="form.get('password') as password"  class="form-floating mt-2">
+            <input type="password" class="form-control" [class.is-invalid]="password.invalid && (password.dirty || f.submitted)"  id="password" placeholder="Password" formControlName="password">
+            <label for="password" translate>PASSWORD</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary mt-4" type="submit" [disabled]="loading"><span translate>SIGN_IN</span></button>
+        <div *ngIf="invalidCredentials" class="alert alert-danger mt-5" role="alert">
+            <span translate>INVALID_CREDENTIALS</span>
+          </div>          
+    </form>
+</main>

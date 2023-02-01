@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "i18n:init": "ngx-translate-extract --input ./src --output ./src/assets/i18n/template.json --key-as-default-value --replace --format json",
+    "i18n:extract": "ngx-translate-extract --input ./src --output ./src/assets/i18n/{en,es}.json --clean --format json"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +20,15 @@
     "@angular/platform-browser": "^15.1.0",
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
+    "@apollo/client": "^3.0.0",
+    "@biesbjerg/ngx-translate-extract-marker": "^1.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^14.0.1",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
+    "@popperjs/core": "^2.11.6",
+    "apollo-angular": "^4.2.0",
+    "bootstrap": "^5.2.3",
+    "graphql": "^16",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -26,7 +37,9 @@
     "@angular-devkit/build-angular": "^15.1.3",
     "@angular/cli": "~15.1.3",
     "@angular/compiler-cli": "^15.1.0",
+    "@angular/localize": "^15.1.0",
     "@types/jasmine": "~4.3.0",
+    "@vendure/ngx-translate-extract": "^8.0.3",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
